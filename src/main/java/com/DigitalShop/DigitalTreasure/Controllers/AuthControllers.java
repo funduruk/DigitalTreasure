@@ -64,21 +64,11 @@ public class AuthControllers {
             SecurityContextHolder.getContext().setAuthentication(auth);
 
             String token = jwtTokenProvider.generateToken(auth);
+            System.out.println(token);
             return ResponseEntity.ok(new JwtAuthenticationResponse(token));
 
         } catch (AuthenticationException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
-
-
-    }
-
-    @GetMapping("/csrf")
-    public ResponseEntity<?> getCsrfToken(HttpServletRequest request) {
-        CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
-        if (csrfToken == null) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("CSRF-токен не найден");
-        }
-        return ResponseEntity.ok(Collections.singletonMap("token", csrfToken.getToken()));
     }
 }
