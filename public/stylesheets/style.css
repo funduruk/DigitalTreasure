@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+  background-image: linear-gradient(to right, lightgreen, skyblue);
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.text-container {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+
+}
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  text-align: justify;
+  text-decoration-color: aqua;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Это позволяет элементам переноситься на новую строку */
+  gap: 20px; /* Расстояние между товарами */
+}
+.product-container{
+  display: flex;
+  background: gray;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.button {
+  background-color: #4CAF50; /* Зеленый */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
